@@ -1,6 +1,6 @@
 package com.example.mapping.Mapping.controller;
 
-import com.example.mapping.Mapping.entity.student;
+import com.example.mapping.Mapping.entity.Student;
 import com.example.mapping.Mapping.service.Serviceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,8 +17,8 @@ public class controller {
     private Serviceimpl serviceimpl;
 
     @PostMapping("/savestudent")
-    public ResponseEntity<student>  saveStddetails(@RequestBody student student){
-        student s1 = serviceimpl.saveStudent(student);
+    public ResponseEntity<Student>  saveStddetails(@RequestBody Student student){
+        Student s1 = serviceimpl.saveStudent(student);
         return new ResponseEntity<>(s1, HttpStatus.OK);
 
     }

@@ -12,8 +12,8 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table(name = "student")
-public class student {
-    public student(String sname, int age) {
+public class Student {
+    public Student(String sname, Long age) {
         this.sname = sname;
         this.age = age;
     }
@@ -26,7 +26,7 @@ public class student {
      private String sname;
 
      @Column(name = "age")
-     private int age;
+     private Long age;
 
      @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
      @JoinColumn(name = "b_id")

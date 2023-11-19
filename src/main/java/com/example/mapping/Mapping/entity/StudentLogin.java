@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name="student_login")
-public class studentlogin {
+public class StudentLogin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
